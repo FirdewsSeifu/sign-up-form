@@ -1,0 +1,146 @@
+/* Define the custom font */
+@font-face {
+    font-family: 'NorseBold';
+    src: url('Norse-Bold.otf') format('opentype');
+}
+
+/* Apply the font to all elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'NorseBold', sans-serif; /* Fallback to sans-serif if Norse-Bold is unavailable */
+}
+
+body, html{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.acountcreate{
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    height: 80vh;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.image{
+    width: 50%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url('leaf.jpg'); 
+}
+
+.image::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.logo-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.logo-text .logo{
+    width: 80px;
+}
+
+.logo-text p{
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.creation {
+    width: 50%;
+    padding: 40px;
+    background-color: white; 
+}
+
+.creation h1{
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-section p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.form-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.input-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field label {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+.input-field input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.error-message {
+    font-size: 0.85rem;
+    color: red;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.submit-btn {
+    width: 70%;
+    padding: 15px;
+    background-color: #556b2f;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #6b8e23;
+}
+
+.creation a {
+    color: #556b2f;
+    text-decoration: none;
+}
+
+.creation a:hover {
+    text-decoration: underline;
+}
